@@ -1,0 +1,987 @@
+%whitelink {
+  color: white;
+}
+
+* {
+  /*border: 1px rgb(236, 18, 18) solid;*/
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+
+/*ДЛЯ DESCTOP*#######################*/
+@media screen and (min-width: 1240px) {
+  .page {
+    font-size: 16px;
+    max-width: 100vw;
+    max-height: 90vh;
+
+    /*Контейнер верхней навигации*/
+    .nav {
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: 40% 10% 20% 10%;
+      background-color: #303030;
+      justify-content: end;
+
+      .container_span {
+        padding-top: 5%;
+        display: grid;
+        color: white;
+        grid-template-columns: 10% 10% 20% 10%;
+        gap: 10%;
+      }
+      .sanct,
+      .burger {
+        padding-top: 5%;
+        color: white;
+        margin-right: 20%;
+        max-width: 100%;
+      }
+      .button {
+        cursor: pointer;
+        margin-top: 5%;
+        margin-left: 5%;
+        background-color: #303030;
+        color: #bbcc68;
+        border: 0.5px #bbcc68 solid;
+        max-width: 70%;
+        max-height: 70%;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        color: rgb(92, 195, 63);
+      }
+    }
+    .img_logo {
+      max-width: 100vw;
+      background: #303030;
+      background-size: contain;
+
+      .img_logo_img {
+        position: relative;
+        width: 100%;
+      }
+    }
+
+    /*Лицевой блок*/
+    .container_centr {
+      display: grid;
+      grid-template-rows: 50% 50%;
+      justify-content: center;
+      align-content: center;
+      background: url(./images/background.png);
+      background-size: 100vw 100%;
+      background-repeat: no-repeat;
+      max-width: 100%;
+      height: 100vh;
+      .logo_center {
+        align-self: end;
+        max-width: 100%;
+      }
+      .text_center {
+        margin-top: 2%;
+        align-self: start;
+        text-align: center;
+        color: #000;
+        font-size: 1em;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 1px;
+      }
+    }
+
+    /*Портфолио работ**************/
+    .container_foto_portfolio {
+      display: grid;
+      background-color: #303030;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-rows: repeat(3, 300px);
+      margin: 0;
+      padding: 0;
+    }
+
+    .h2 {
+      display: grid;
+      background-color: #303030;
+      grid-area: h2;
+      font-size: 1.5em;
+      font-weight: bold;
+      padding: 10px 20px 10px;
+      justify-content: space-between;
+      grid-template-columns: 1fr 1fr;
+
+      .ugol_portfolio {
+        display: grid;
+        grid-template-columns: 10% 1fr;
+        align-items: center;
+        color: white;
+        font-size: 1.2em;
+        margin-top: 5%;
+        margin-bottom: 4%;
+      }
+
+      .a1 {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        align-items: center;
+        a {
+          text-decoration: none;
+          color: white;
+          &:hover {
+            color: #bbcc68;
+          }
+        }
+      }
+    }
+
+    /*Разделительная с цитатой*********/
+    .background_color_black {
+      grid-area: line_black;
+      background-color: #303030;
+      color: white;
+      text-align: center;
+      padding-top: 5%;
+      padding-bottom: 5%;
+      letter-spacing: 1px;
+      font-style: italic;
+      font-size: 1em;
+      .button {
+        margin-left: 10%;
+        background-color: #303030;
+        color: #bbcc68;
+        border: 1px #bbcc68 solid;
+        padding: 0.5%;
+        align-items: end;
+        cursor: pointer;
+      }
+    }
+
+    /*Блок - Наши преимущества**************/
+    .container_performance {
+      display: grid;
+      background-image: url(./images/2background.png);
+      background-size: 100vw 100%;
+      max-width: 100vw;
+      height: 80vh;
+      grid-template-columns: 7% 1fr 7% 1fr 7% 1fr;
+      grid-template-rows: 30% 10% 20% 10% 20%;
+      justify-items: start;
+      gap: 5px;
+      grid-template-areas:
+        "auto title_glav title_glav title_glav title_glav title_glav"
+        "img_cub title1 img_time title2 img_money title3"
+        "img_cub text1 img_time text2 img_money text3"
+        "img_sofa title4 img_people title5 img_house title6"
+        "img_sofa text4 img_people text5 img_house text6";
+      .nashi_preimuchsestva {
+        grid-area: title_glav;
+        margin: 0;
+        font-size: 1.8em;
+        padding-top: 5%;
+        font-weight: bold;
+      }
+      .title {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 5%;
+      }
+
+      .text {
+        padding: 4%;
+      }
+
+      /*названия элементов для grid-area*/
+      @import "__name_grid_area";
+    }
+
+    /*Контейнер - Наши проекты в инстаграмм*/
+    .container_foto {
+      background-color: #303030;
+      display: grid;
+      grid-template-areas:
+        "foto1 foto2 foto3"
+        "foto4 foto5 foto6";
+      grid-template-columns: 1fr, 1fr, 1fr;
+      grid-template-rows: 1fr 1fr;
+      justify-content: space-evenly;
+      gap: 5px;
+    }
+
+    .container_bottom_our_proekt {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    .container_bottom_our_proekt .button3 {
+      color: rgb(16, 1, 1);
+      background-color: #ffffff;
+      border: 1px black solid;
+      width: 150px;
+    }
+    .container_bottom_our_proekt .button {
+      background-color: #303030;
+      color: white;
+    }
+
+    .container_bottom_our_proekt a {
+      display: flex;
+      color: black;
+      text-decoration: none;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .h1 {
+      grid-area: h1;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /*Стилизуем футер*/
+    .footer {
+      background-color: #171717;
+      color: #707070;
+      height: 265px;
+      padding-top: 90px;
+      justify-content: space-evenly;
+
+      display: grid;
+      grid-template-rows: repeat(5, 50px);
+      grid-template-areas:
+        "logo_footer o_nas interior email tg location"
+        "logo_footer portfolio finish_works inst cho location"
+        "logo_footer price cottage vk pinterest mobile"
+        "copyrigt services furniture furniture furniture mobile"
+        "copyrigt blog furniture furniture furniture mobile";
+    }
+
+    .footer a {
+      text-decoration: none;
+      color: #707070;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: rgb(92, 195, 63);
+    }
+
+    .logo_footer {
+      grid-area: logo_footer;
+      justify-self: center;
+      align-self: end;
+      padding-bottom: 10px;
+    }
+
+    .copyrigt {
+      grid-area: copyrigt;
+      font-size: 12px;
+    }
+
+    .o_nas {
+      grid-area: o_nas;
+    }
+
+    .portfolio {
+      grid-area: portfolio;
+    }
+
+    .price {
+      grid-area: price;
+    }
+
+    .services {
+      grid-area: services;
+    }
+
+    .blog {
+      grid-area: blog;
+    }
+
+    .interior {
+      grid-area: interior;
+    }
+
+    .finish_works {
+      grid-area: finish_works;
+    }
+
+    .cottage {
+      grid-area: cottage;
+    }
+
+    .furniture {
+      grid-area: furniture;
+    }
+
+    .email {
+      grid-area: email;
+    }
+
+    .inst {
+      grid-area: inst;
+    }
+
+    .vk {
+      grid-area: vk;
+    }
+
+    .tg {
+      grid-area: tg;
+    }
+
+    .cho {
+      grid-area: cho;
+    }
+
+    .pinterest {
+      grid-area: pinterest;
+    }
+
+    .location {
+      grid-area: location;
+    }
+
+    .mobile {
+      grid-area: mobile;
+    }
+  }
+}
+
+/*ДЛЯ ПЛАНШЕТА*#######################*/
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .page {
+    font-size: 16px;
+    max-width: 100vw;
+    max-height: 90vh;
+
+    /*Контейнер верхней навигации*/
+    .nav {
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: 30% 30% 10%;
+      background-color: #303030;
+      justify-content: end;
+
+      .container_span {
+        display: none;
+      }
+      .sanct {
+        padding-top: 5%;
+        color: white;
+        max-width: 100%;
+        text-align: center;
+      }
+      .burger {
+        color: white;
+      }
+
+      .button {
+        margin-top: 5%;
+        margin-left: 5%;
+        background-color: #303030;
+        color: #bbcc68;
+        border: 0.5px #bbcc68 solid;
+        max-width: 70%;
+        max-height: 70%;
+      }
+    }
+
+    /*длинный логотип под верхней навигацией*/
+    .img_logo {
+      max-width: 100vw;
+      background: #303030;
+      background-size: contain;
+
+      .img_logo_img {
+        position: relative;
+        width: 100%;
+      }
+    }
+
+    /*Лицевой блок*/
+    .container_centr {
+      display: grid;
+      grid-template-rows: 50% 50%;
+      justify-content: center;
+      align-content: center;
+      background: url(./images/background.png);
+      background-size: 100vw 100%;
+      background-repeat: no-repeat;
+      max-width: 100%;
+      height: 100vh;
+      .logo_center {
+        align-self: end;
+        width: 100%;
+        max-height: 100%;
+      }
+      .text_center {
+        width: 100%;
+        margin-top: 2%;
+        align-self: start;
+        text-align: center;
+        color: #000;
+        font-size: 2em;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 1px;
+      }
+    }
+
+    /*Портфолио работ**************/
+    .container_foto_portfolio {
+      display: grid;
+      max-width: 100vw;
+      background-color: #303030;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-rows: repeat(3, 300px);
+      justify-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .h2 {
+      display: grid;
+      background-color: #303030;
+      grid-area: h2;
+      font-weight: bold;
+      font-size: 1.5em;
+      padding: 10px 20px 10px;
+      justify-content: space-between;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 30%;
+
+      .ugol_portfolio {
+        display: grid;
+        grid-template-columns: 5% 1fr;
+        align-items: center;
+        color: white;
+        font-size: 1.2em;
+        margin-top: 5%;
+      }
+
+      .a1 {
+        display: grid;
+        grid-template-columns: 30% 30% 30% 30%;
+        align-items: center;
+        justify-items: start;
+        margin-left: 5%;
+        margin-bottom: 5%;
+        a {
+          text-decoration: none;
+          color: white;
+          &:hover {
+            color: #bbcc68;
+          }
+        }
+      }
+    }
+
+    /*Разделительная с цитатой*********/
+    .background_color_black {
+      display: grid;
+      background-color: #303030;
+      color: white;
+      text-align: center;
+      padding-top: 5%;
+      padding-bottom: 5%;
+      letter-spacing: 1px;
+      font-style: italic;
+      grid-template-columns: 50% 50%;
+      gap: 5px;
+      .citat {
+        color: #ffffff;
+        width: 90%;
+        margin-left: 10%;
+        text-align: start;
+      }
+      .button {
+        margin-top: 5%;
+        margin-left: 20%;
+        width: 60%;
+        height: 80%;
+        background-color: #303030;
+        color: #bbcc68;
+        border: 1px #bbcc68 solid;
+        padding: 0.5%;
+      }
+    }
+
+    /*Блок - Наши преимущества**************/
+    .container_performance {
+      display: grid;
+      background-image: url(./images/2background.png);
+      background-size: 100vw;
+      grid-template-columns: 20% 1fr;
+      justify-items: center;
+      gap: 5px;
+      grid-template-areas:
+        "title_glav title_glav"
+        "img_cub title1"
+        "img_cub text1"
+        "img_time title2"
+        "img_time text2"
+        "img_money title3"
+        "img_money text3"
+        "img_sofa title4"
+        "img_sofa text4"
+        "img_people title5"
+        "img_people text5"
+        "img_house title6"
+        "img_house text6";
+
+      .nashi_preimuchsestva {
+        grid-area: title_glav;
+        margin: 0;
+        font-size: 1.8em;
+        padding-top: 5%;
+        font-weight: bold;
+      }
+      .title {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 5%;
+      }
+
+      .text {
+        padding: 4%;
+        font-size: 1em;
+      }
+
+      /*названия элементов для grid-area*/
+      @import "__name_grid_area";
+    }
+
+    /*Контейнер - Наши проекты в инстаграмм*/
+    .container_foto {
+      display: grid;
+      max-width: 100vw;
+      grid-template-areas:
+        "foto1 foto2"
+        "foto3 foto4"
+        "foto5 foto6";
+      background-color: #fefefe;
+    }
+
+    .container_bottom_our_proekt {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    .container_bottom_our_proekt .button3 {
+      color: rgb(16, 1, 1);
+      background-color: #ffffff;
+      border: 1px black solid;
+      width: 150px;
+    }
+    .container_bottom_our_proekt .button {
+      background-color: #303030;
+      color: white;
+    }
+
+    .container_bottom_our_proekt a {
+      display: flex;
+      color: black;
+      text-decoration: none;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .h1 {
+      grid-area: h1;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /*Стилизуем футер*/
+    .footer {
+      background-color: #171717;
+      color: #707070;
+      height: 265px;
+      padding-top: 90px;
+      justify-content: space-evenly;
+
+      display: grid;
+      grid-template-rows: repeat(5, 50px);
+      grid-template-areas:
+        "logo_footer o_nas interior email tg location"
+        "logo_footer portfolio finish_works inst cho location"
+        "logo_footer price cottage vk pinterest mobile"
+        "copyrigt services furniture furniture furniture mobile"
+        "copyrigt blog furniture furniture furniture mobile";
+    }
+
+    .footer a {
+      text-decoration: none;
+      color: #707070;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: rgb(92, 195, 63);
+    }
+
+    .logo_footer {
+      grid-area: logo_footer;
+      justify-self: center;
+      align-self: end;
+      padding-bottom: 10px;
+    }
+
+    .copyrigt {
+      grid-area: copyrigt;
+      font-size: 12px;
+    }
+
+    .o_nas {
+      grid-area: o_nas;
+    }
+
+    .portfolio {
+      grid-area: portfolio;
+    }
+
+    .price {
+      grid-area: price;
+    }
+
+    .services {
+      grid-area: services;
+    }
+
+    .blog {
+      grid-area: blog;
+    }
+
+    .interior {
+      grid-area: interior;
+    }
+
+    .finish_works {
+      grid-area: finish_works;
+    }
+
+    .cottage {
+      grid-area: cottage;
+    }
+
+    .furniture {
+      grid-area: furniture;
+    }
+
+    .email {
+      grid-area: email;
+    }
+
+    .inst {
+      grid-area: inst;
+    }
+
+    .vk {
+      grid-area: vk;
+    }
+
+    .tg {
+      grid-area: tg;
+    }
+
+    .cho {
+      grid-area: cho;
+    }
+
+    .pinterest {
+      grid-area: pinterest;
+    }
+
+    .location {
+      display: none;
+      grid-area: location;
+    }
+
+    .mobile {
+      display: none;
+      grid-area: mobile;
+    }
+  }
+}
+
+/*ДЛЯ ТЕЛЕФОНА******************************/
+@media screen and (min-width: 368px) and (max-width: 767px) {
+  .page {
+    font-size: 10px;
+    max-width: 100vw;
+    max-height: 90vh;
+
+    /*Контейнер верхней навигации*/
+    .nav {
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: 30% 30% 15%;
+      background-color: #656060;
+      justify-content: end;
+
+      .container_span {
+        display: none;
+      }
+      .sanct {
+        padding-top: 5%;
+        color: white;
+        max-width: 100%;
+        text-align: center;
+      }
+
+      .burger {
+        display: none;
+        color: white;
+      }
+
+      .button {
+        margin-top: 5%;
+        margin-left: 20%;
+        background-color: #303030;
+        color: #bbcc68;
+        border: 0.5px #bbcc68 solid;
+        max-width: 70%;
+        max-height: 70%;
+        font-size: 0.8em;
+      }
+    }
+
+    /*длинный логотип под верхней навигацией*/
+    .img_logo {
+      max-width: 100vw;
+      background: #303030;
+      background-size: contain;
+
+      .img_logo_img {
+        position: relative;
+        width: 100%;
+      }
+    }
+
+    /*Лицевой блок*/
+    .container_centr {
+      display: grid;
+      grid-template-rows: 50% 50%;
+      justify-content: center;
+      align-content: center;
+      background: url(./images/Rectangle\ 79.png);
+      background-size: 100vw 100%;
+      background-repeat: repeat-y;
+      max-width: 100%;
+      height: 60vh;
+      .logo_center {
+        align-self: end;
+        justify-self: center;
+        width: 80%;
+        max-height: 100%;
+      }
+      .text_center {
+        width: 100%;
+        margin-top: 2%;
+        align-self: start;
+        text-align: center;
+        color: #000;
+        font-size: 1.5em;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 1px;
+      }
+    }
+
+    /*Портфолио работ**************/
+    .container_foto_portfolio {
+      display: flex;
+      width: 100vw;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2%;
+      background-color: #fefefe;
+      .portf {
+        min-width: 100px;
+        max-width: 150px;
+      }
+    }
+
+    .h2 {
+      display: grid;
+      background-color: #303030;
+      grid-area: h2;
+      font-weight: bold;
+      padding: 10px 20px 10px;
+      justify-content: space-between;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 30%;
+
+      .ugol_portfolio {
+        display: grid;
+        grid-template-columns: 5% 1fr;
+        align-items: center;
+        color: white;
+        font-size: 1.2em;
+        margin-top: 5%;
+      }
+
+      .a1 {
+        display: grid;
+        grid-template-columns: 30% 30% 30% 30%;
+        align-items: center;
+        justify-items: start;
+        margin-left: 5%;
+        margin-bottom: 5%;
+        a {
+          text-decoration: none;
+          color: white;
+          &:hover {
+            color: #bbcc68;
+          }
+        }
+      }
+    }
+
+    /*Разделительная с цитатой*********/
+    .background_color_black {
+      display: grid;
+      background-color: #303030;
+      color: white;
+      text-align: center;
+      padding-top: 5%;
+      padding-bottom: 5%;
+      letter-spacing: 1px;
+      font-style: italic;
+      grid-template-columns: 50% 50%;
+      gap: 5px;
+      .citat {
+        color: #ffffff;
+        width: 90%;
+        margin-left: 10%;
+        text-align: start;
+      }
+      .button {
+        margin-top: 5%;
+        margin-left: 20%;
+        width: 60%;
+        height: 80%;
+        background-color: #303030;
+        color: #bbcc68;
+        border: 1px #bbcc68 solid;
+        padding: 0.5%;
+      }
+    }
+
+    /*Блок - Наши преимущества**************/
+    .container_performance {
+      display: grid;
+      background-image: url(./images/back_phone.png);
+      background-size: 100vw;
+      grid-template-columns: 20% 1fr;
+      justify-items: center;
+      gap: 5px;
+      grid-template-areas:
+        "title_glav title_glav"
+        "img_cub title1"
+        "img_cub text1"
+        "img_time title2"
+        "img_time text2"
+        "img_money title3"
+        "img_money text3"
+        "img_sofa title4"
+        "img_sofa text4"
+        "img_people title5"
+        "img_people text5"
+        "img_house title6"
+        "img_house text6";
+
+      .nashi_preimuchsestva {
+        grid-area: title_glav;
+        margin: 0;
+        font-size: 1.8em;
+        padding-top: 5%;
+        font-weight: bold;
+      }
+      .title {
+        display: none;
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 5%;
+      }
+
+      .text {
+        padding: 4%;
+        font-size: 1em;
+      }
+
+      .img_p {
+        width: 40px;
+      }
+
+      /*названия элементов для grid-area*/
+      @import "__name_grid_area";
+    }
+
+    /*Контейнер - Наши проекты в инстаграмм*/
+    .container_foto {
+      display: flex;
+      width: 100vw;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2%;
+      background-color: #fefefe;
+      .inst1 {
+        min-width: 100px;
+        max-width: 150px;
+      }
+    }
+
+    .container_bottom_our_proekt {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      padding-top: 5%;
+      padding-bottom: 5%;
+    }
+    .container_bottom_our_proekt .button3 {
+      color: rgb(16, 1, 1);
+      background-color: #ffffff;
+      border: 1px black solid;
+      width: 20%;
+    }
+    .container_bottom_our_proekt .button {
+      background-color: #303030;
+      color: white;
+    }
+
+    .container_bottom_our_proekt a {
+      display: flex;
+      color: black;
+      text-decoration: none;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .h1 {
+      grid-area: h1;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* футер*/
+    .footer {
+      display: none;
+    }
+  }
+}
